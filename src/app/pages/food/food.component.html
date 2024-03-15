@@ -1,0 +1,65 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row jus">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" *ngIf="food?.img">
+                                <img src={{food?.img}}
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item " *ngIf="food?.img1">
+                                <img src={{food?.img1}}
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item" *ngIf="food?.img2">
+                                <img src={{food?.img2}}
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item" *ngIf="food?.img3">
+                                <img src={{food?.img3}}
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item" *ngIf="food?.img4">
+                                <img src={{food?.img4}}
+                                    class="d-block w-100">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="content">
+                        <h1>{{food?.name}}</h1>
+                        <div class="lead">{{food?.brand}}</div>
+                        <div class="lead">{{food?.location}}</div>
+                        <div class="text-success mt-3">Special price</div>
+                        <h2>₹{{food?.price}}</h2>
+                       <div class="p-3">
+                        <span (click)="minus()"><fa-icon [icon]="faMinus"></fa-icon></span> <span class="px-3 item">{{item}}</span><span (click)="plus()"><fa-icon [icon]="faPlus"></fa-icon></span>
+                       </div>
+                    </div>
+                    <div class="mx-2 item">1 item added</div>
+                    <div class="d-flex border p-4 justify-content-between mt-4">
+                       <div class="">
+                        <span class="item">Total</span>
+                        <div class="price">₹{{total}}</div>
+                       </div>
+                        <button class="btn btn-warning" (click)="buy()">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

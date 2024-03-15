@@ -1,0 +1,26 @@
+.card{
+    font-family: Okra, Helvetica, sans-serif;
+    border: none;
+    height: 360px;
+}
+.card img{
+    height: 220px;
+}
+.col-md-4{
+    border-radius: 7px;
+}
+.col-md-4:hover{
+    box-shadow: 0 0 10px -6px black;
+}
+.card p{
+    text-align: right;
+    font-size: 1.2em;
+}
+.col-md-4 a{
+    text-decoration: none;
+}
+@media only screen and (max-width: 770px){
+    .row .col-md-4{
+        box-shadow: 0 0 10px -6px black;
+    }
+}

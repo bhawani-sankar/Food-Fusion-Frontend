@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-4">
+            <form class="d-flex" #food="ngForm" (submit)="searchFood(food.value)">
+                <input class="form-control me-2 px-5" type="search" placeholder="Search" ngModel name="name">
+                <button class="btn btn-outline-success rounded rounded-5" type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-4 my-4 p-3" *ngFor="let item of foodDetails">
+                    <a routerLink="{{item.name}}">
+                        <div class="card" (click)="getFoodId(item.id)">
+                            <img src={{item.img}}
+                                alt="" class="card-img-top">
+                            <div class="p-2">
+                                <h4>{{item.name}}</h4>
+                                <div class="text-secondary">{{item.category}}</div>
+                                <div class="text-secondary">{{item.location}}</div>
+                                <p class="px-2">&#8377;{{item.price}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

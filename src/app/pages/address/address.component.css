@@ -1,0 +1,12 @@
+.bdr{
+    border-bottom:  1px dashed rgba(195, 194, 194, 0.922);
+}
+.mr-input{
+    margin-left: 30px;
+    /* margin-top: -25px; */
+}
+@media only screen and (max-width: 770px){
+   .rr{
+       flex-direction:column-reverse
+   }
+}

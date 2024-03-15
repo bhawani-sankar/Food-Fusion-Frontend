@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row justify-content-center my-5">
+        <div class="col-md-10 p-4 border border-2 rounded rounded-4">
+            <div class="row justify-content-around">
+                <div class="col-md-7">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://media.istockphoto.com/id/184946701/photo/pizza.jpg?s=2048x2048&w=is&k=20&c=8OBQa24pfg30tPlnhq4fCzhdaNlcHn-vRDpTHo4H3bA=" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item ">
+                            <img src="https://media.istockphoto.com/id/1345624336/photo/chicken-biriyani.jpg?s=2048x2048&w=is&k=20&c=uU0uuti6KOvpQhXuu6VMpgi021o1vZXfOhpMrJXSn1o=" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://media.istockphoto.com/id/467416670/photo/huge-grass-fed-bison-hamburger-with-chips-beer.jpg?s=2048x2048&w=is&k=20&c=2lQhuYKuABeKPU1W1faKAQIcBtBFB7Ln1VKBKQUFpMc=" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://media.istockphoto.com/id/1265209311/photo/fried-chicken-kebab-or-kabab.jpg?s=2048x2048&w=is&k=20&c=MVbuGca75y60DlhtpT6rCLQvjCS2wbmgVjXzZezFkAE=" class="d-block w-100">
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-5">
+                    <h1 class="text-center">User Login</h1>
+                    <form class="p-4" #user="ngForm" (submit)="loginUser(user.value)">
+                        <div class="form-grup m-4">
+                            <input type="text" class="form-control" placeholder="Username" ngModel name="username" required>
+                        </div>
+                        <div class="form-grup m-4">
+                            <input type="password" class="form-control" placeholder="Password" ngModel name="password" required>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-outline-success px-5" type="submit">Login</button>
+                            <p class="my-2">Not a member?  <span class="text-primary" routerLink="/signup">Signup</span></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

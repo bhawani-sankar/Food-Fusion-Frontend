@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light px-4">
+    <div class="container-fluid">
+        <a routerLink="" class="navbar-brand">
+            <img src="./../../../assets/Images/logo-img.png" class="img-logo">
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" *ngIf="!islogin">
+                    <a routerLink="/login" class="nav-link active">Login</a>
+                </li>
+                <li class="nav-item" *ngIf="!islogin">
+                    <a routerLink="/signup" class="nav-link active">Signup</a>
+                </li>
+                <li class="nav-item dropdown" *ngIf="islogin">
+                    <a class="nav-link " href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="mx-1"><fa-icon [icon]="faCircleUser"></fa-icon></span>{{userData?.name}}<span class="mx-1"><fa-icon [icon]="faAngleDown"></fa-icon></span>
+                    </a>
+                    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item disabled" ><span class="mx-1"><fa-icon [icon]="faUser"></fa-icon></span>My Profile</a></li>
+                        <li><a class="dropdown-item "  routerLink="/order"><span class="mx-1"><fa-icon [icon]="faBoxOpen"></fa-icon></span>Order</a></li>
+                        <li><a class="dropdown-item disabled" ><span class="mx-1"><fa-icon [icon]="faBell"></fa-icon></span>Notification </a></li>
+                        <li><a class="dropdown-item" (click)="logout()"><span class="mx-1"><fa-icon [icon]="faArrowRightFromBracket"></fa-icon></span>Logout </a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
